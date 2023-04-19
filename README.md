@@ -58,23 +58,15 @@ Syntax: ES6
 #### Q1: What is the result?
 `true + false > 2 + true`
 
-1) `true`
 2) `false`
-3) `TypeError`
-4) `NaN`
 
 #### Q2: What is the result?
 `"1" - -"1"`
-1) `0`
 2) `2`
-3) `11`
-4) `"11"`
 
 #### Q3: What is the result?
 `new array(5).toString()`
 1) `",,,,"`
-2) `[]`
-3) `"[]"`
 
 #### Q4: What is printed in the console?
 ```
@@ -83,14 +75,10 @@ Syntax: ES6
   arr.push("bin")
   console.log(arr)
 ```
-1) `['foo', 'bar']`
-2) `['foo', 'bar', 'bin']`
-3) `['bin', 'foo', 'bar']`
 4) `['bin']`
 
 #### Q5: What is the result?
 `10 > 9 > 8 === true` 
-1) `true`
 2) `false`
 
 #### Q6: What is logged to the console?
@@ -103,10 +91,6 @@ function bar() {
 }
 console.log(typeof bar());
 ``` 
-1) `number`
-2) `function`
-3) `undefined`
-4) `string`
 5) `Error`
 
 ---------
@@ -114,10 +98,16 @@ console.log(typeof bar());
 ### React & Redux Questions
 
 #### Q1: What is the difference between state and props?
+#### In React, props are passed down from a parent component to a child component, while state is managed within a component and can be changed by the component itself. Props are immutable, while state can be changed, and state is only accessible within the component that manages it.
 #### Q2: What is the point of using `keys` in React?
+#### Keys are used in React to help identify which items in a list have changed, been added, or been removed, which helps optimize rendering and improve performance.
 #### Q3: What's the difference between a controlled component and an uncontrolled one in React?
+#### A controlled component is one whose value is controlled by React, while an uncontrolled component is one whose value is controlled by the DOM. Controlled components offer a more reliable and consistent way of managing form state in React.
 #### Q4: What would be a good lifecycle method/hook to fetch data from an API for a component?
-
+#### The useEffect hook is commonly used to fetch data from an API for a component in React. It allows you to perform side effects like data fetching and updating the component state in response to changes in props or state.
 #### Q5: How is `state` updated in an application using Redux?
+#### In an application using Redux, state is updated through actions, which are plain JavaScript objects that describe what happened. These actions are dispatched to a central store, which manages the application state and returns a new state object based on the previous state and the action dispatched
 #### Q6: How can we handle async logic in Redux (for example making a call to fetch data)?
+#### Async logic can be handled in Redux by using middleware like redux-thunk or redux-saga. These middleware allow actions to return functions that can perform async operations and dispatch additional actions as needed.
 #### Q7: What are reducers in Redux?
+#### Reducers are pure functions in Redux that take the current state and an action as arguments, and return a new state based on the action type. They describe how the application state changes in response to actions dispatched to the store.
