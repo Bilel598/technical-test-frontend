@@ -52,7 +52,7 @@ const HomePage = ({ name = "" }: Props) => {
       <Head>
         <title>Appointment Form</title>
       </Head>
-      <div>
+      <div className="main">
         <form onSubmit={handleSubmit}>
           <div>
             <label htmlFor="service">DESIRED REVIEW</label>
@@ -64,8 +64,7 @@ const HomePage = ({ name = "" }: Props) => {
             </select>
           </div>
           {formDescription && (
-            <div>
-              <h2>{formDescription.title}</h2>
+            <div className="insideForm">
               {formDescription.fields.map((input) => (
                 <div key={input.name}>
                   <label htmlFor={input.name}>{input.label}:</label>
